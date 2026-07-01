@@ -3,6 +3,7 @@
 }
 
 :root {
+  --color-deep: #0b3d5c;
   --color-ocean: #1d6fa5;
   --color-sky: #6fc7e3;
   --color-sand: #f6efe3;
@@ -13,7 +14,7 @@ body {
   font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
   color: var(--color-text);
   background-color: #ffffff;
-  margin: 0;
+  margin: 0; 
 }
 
 #about,
@@ -23,9 +24,11 @@ body {
   scroll-margin-top: 70px;
 }
 
+
 .site-header .navbar {
   background-color: var(--color-deep);
 }
+
 
 .site-header a {
   color: #fff;
@@ -35,6 +38,7 @@ body {
 .navbar-nav > .nav-item {
   position: relative;
 }
+
 .nav-link {
   position: relative;
   padding-bottom: 4px;
@@ -56,6 +60,7 @@ body {
   width: 100%;
 }
 
+
 .about-section {
   background-color: var(--color-sand);
 }
@@ -63,6 +68,8 @@ body {
 .accent {
   color: var(--color-ocean);
 }
+
+
 .profile-img {
   width: 220px;
   height: 220px;
@@ -86,6 +93,7 @@ body {
   margin-bottom: 0.4rem;
 }
 
+
 .section-title {
   margin-bottom: 1.5rem;
   font-weight: 700;
@@ -105,21 +113,23 @@ body {
   border-color: var(--color-sky);
 }
 
+
+
 .goal-section {
   background-color: var(--color-sand);
 }
 
 .goal-flex {
   display: flex;
-  flex-wrap: wrap;   
-  gap: 20px;             
+  flex-wrap: wrap;         
+  gap: 20px;                
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
 .goal-flex li {
-  flex: 1 1 calc(50% - 20px); 
+  flex: 1 1 calc(50% - 20px);
   display: flex;
   align-items: flex-start;
   gap: 12px;
@@ -142,6 +152,7 @@ body {
   font-weight: 700;
   font-size: 0.9rem;
 }
+
 
 .info-table th,
 .info-table td {
