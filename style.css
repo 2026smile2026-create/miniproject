@@ -1,8 +1,3 @@
-/* =========================================================
-   기본 설정
-   ========================================================= */
-
-/* 태그 선택자 + box-sizing : 모든 요소의 크기 계산을 padding/border 포함 방식으로 통일 */
 * {
   box-sizing: border-box;
 }
@@ -20,10 +15,9 @@ body {
   font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
   color: var(--color-text);
   background-color: #ffffff;
-  margin: 0; /* 브라우저 기본 margin 제거 */
+  margin: 0;
 }
 
-/* id 선택자 예시 : 네비게이션에서 이동할 각 section 상단에 여유 공간 확보 */
 #about,
 #hobby,
 #goal,
@@ -31,27 +25,18 @@ body {
   scroll-margin-top: 70px;
 }
 
-
-/* =========================================================
-   header / nav
-   ========================================================= */
-
 .site-header .navbar {
   background-color: var(--color-deep);
 }
 
-/* 후손 선택자 : .site-header 안의 모든 a 태그 */
 .site-header a {
   color: #fff;
   text-decoration: none;
 }
 
-/* 자식 선택자 : navbar-nav 바로 아래의 nav-item 에만 적용 (더 깊은 하위요소는 제외) */
 .navbar-nav > .nav-item {
   position: relative;
 }
-
-/* 가상클래스(:hover) + 가상요소(::after) : 밑줄이 서서히 채워지는 hover 효과 */
 .nav-link {
   position: relative;
   padding-bottom: 4px;
@@ -73,11 +58,6 @@ body {
   width: 100%;
 }
 
-
-/* =========================================================
-   ① 자기소개 section
-   ========================================================= */
-
 .about-section {
   background-color: var(--color-sand);
 }
@@ -85,8 +65,6 @@ body {
 .accent {
   color: var(--color-ocean);
 }
-
-/* 박스 모델 적용 : padding / border / margin 을 명시적으로 지정 */
 .profile-img {
   width: 220px;
   height: 220px;
@@ -98,7 +76,6 @@ body {
   transition: transform 0.3s ease;
 }
 
-/* 가상클래스 : hover 시 살짝 확대되는 효과 */
 .profile-img:hover {
   transform: scale(1.05);
 }
@@ -110,11 +87,6 @@ body {
 .about-list li {
   margin-bottom: 0.4rem;
 }
-
-
-/* =========================================================
-   ② 취미 & 좋아하는 것 section
-   ========================================================= */
 
 .section-title {
   margin-bottom: 1.5rem;
@@ -129,34 +101,27 @@ body {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* 가상클래스(:hover) : 카드가 살짝 떠오르는 hover 효과 */
 .hobby-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 20px rgba(11, 61, 92, 0.15);
   border-color: var(--color-sky);
 }
 
-
-/* =========================================================
-   ③ 학습 목표 section : Flexbox 직접 구현
-   ========================================================= */
-
 .goal-section {
   background-color: var(--color-sand);
 }
 
-/* display: flex 로 한 방향 정렬 구현 (Bootstrap grid를 쓰지 않고 직접 작성) */
 .goal-flex {
   display: flex;
-  flex-wrap: wrap;         /* 화면이 좁아지면 아이템이 줄바꿈 */
-  gap: 20px;                /* 아이템 사이 간격 */
+  flex-wrap: wrap;   
+  gap: 20px;             
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
 .goal-flex li {
-  flex: 1 1 calc(50% - 20px); /* 넓은 화면에서는 2열 */
+  flex: 1 1 calc(50% - 20px); 
   display: flex;
   align-items: flex-start;
   gap: 12px;
@@ -180,17 +145,11 @@ body {
   font-size: 0.9rem;
 }
 
-
-/* =========================================================
-   ④ 기본 정보 표 section
-   ========================================================= */
-
 .info-table th,
 .info-table td {
-  padding: 12px 16px; /* 표 셀의 박스 모델(padding) 조정 */
+  padding: 12px 16px; 
 }
 
-/* 속성 선택자 : .html 로 끝나는 링크에만 화살표 색상 강조 */
 a[href$=".html"] {
   font-weight: 600;
 }
@@ -198,11 +157,6 @@ a[href$=".html"] {
 .mindset-link {
   margin-top: 1rem;
 }
-
-
-/* =========================================================
-   mindset.html : 이미지 갤러리 (Flex)
-   ========================================================= */
 
 .mindset-gallery {
   display: flex;
@@ -223,25 +177,14 @@ a[href$=".html"] {
   transform: scale(1.03);
 }
 
-
-/* =========================================================
-   footer
-   ========================================================= */
-
 .site-footer {
   background-color: var(--color-deep);
   color: #fff;
 }
 
-
-/* =========================================================
-   반응형 : Media Query / Breakpoint
-   ========================================================= */
-
-/* breakpoint 768px 미만(모바일) : 학습 목표 카드 1열로 변경 */
 @media (max-width: 768px) {
   .goal-flex {
-    flex-direction: column; /* 아이템 배치 방향을 세로로 변경 */
+    flex-direction: column; 
   }
 
   .goal-flex li {
@@ -254,7 +197,6 @@ a[href$=".html"] {
   }
 }
 
-/* breakpoint 480px 미만(아주 좁은 화면) : 여백을 줄여 가로 스크롤 방지 */
 @media (max-width: 480px) {
   .section-title {
     font-size: 1.3rem;
