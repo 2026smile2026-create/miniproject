@@ -3,8 +3,6 @@
 }
 
 :root {
-  /* 서핑 / 스쿠버다이빙 취미에서 착안한 바다색 팔레트 */
-  --color-deep: #0b3d5c;
   --color-ocean: #1d6fa5;
   --color-sky: #6fc7e3;
   --color-sand: #f6efe3;
